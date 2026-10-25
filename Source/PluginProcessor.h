@@ -41,7 +41,7 @@ private:
     std::atomic<float> *pDrive {}, *pPunish {}, *pStyle {}, *pLowCut {}, *pHighCut {},
                        *pTone {}, *pMix {}, *pOutput {}, *pAuto {}, *pMode {};
 
-    dsp::Oversampling<float> oversampling { 2, 2, dsp::Oversampling<float>::filterHalfBandFIREquiriple, true, true };
+    dsp::Oversampling<float> oversampling { 2, 2, dsp::Oversampling<float>::filterHalfBandFIREquiripple, true, true };
 
     dsp::StateVariableTPTFilter<float> lowCut, dcBlock, highCut, toneLP;
     dsp::DelayLine<float, dsp::DelayLineInterpolationTypes::None> dryDelay { 4096 };
